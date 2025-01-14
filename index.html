@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analisis Sentimen</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <div class="header">
+                <h1>Dashboard Analisis Sentimen</h1>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-title">Total Komentar</div>
+                    <div class="stat-value" id="totalComments">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Sentimen Positif</div>
+                    <div class="stat-value" id="positiveCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Sentimen Negatif</div>
+                    <div class="stat-value" id="negativeCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Sentimen Netral</div>
+                    <div class="stat-value" id="neutralCount">0</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div id="commentsContainer"></div>
+
+                <div class="button-container">
+                    <button onclick="addCommentInput()" class="add-comment">
+                        <i class="fas fa-plus"></i> Tambah Komentar
+                    </button>
+                    <button onclick="analyzeSentiments()" class="button">
+                        <i class="fas fa-chart-bar"></i> Analisis Sentimen
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Waktu</th>
+                                <th>Komentar</th>
+                                <th>Platform</th>
+                                <th>Sentimen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

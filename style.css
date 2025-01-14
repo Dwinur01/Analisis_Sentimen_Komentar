@@ -1,0 +1,181 @@
+        :root {
+            --primary: #4f46e5;
+            --secondary: #6b7280;
+            --light-gray: #f3f4f6;
+            --dark-gray: #374151;
+            --white: #ffffff;
+            --positive: #10b981;
+            --negative: #ef4444;
+            --neutral: #6b7280;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .dashboard .header h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-title {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        .add-comment,
+        .button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .add-comment:hover,
+        .button:hover {
+            background: #4338ca;
+        }
+
+        .table-container {
+            margin-top: 1rem;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+
+        .results-table th {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .results-table tbody tr:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .comment-input-container {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background: var(--white);
+        }
+
+        .platform-select {
+            min-width: 140px;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: var(--white);
+            cursor: pointer;
+        }
+
+        .remove-comment {
+            background: var(--negative);
+            color: var(--white);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .remove-comment:hover {
+            background: #dc2626;
+        }
+
+        .sentiment-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            color: var(--white);
+        }
+
+        .sentiment-badge.positif {
+            background: var(--positive);
+        }
+
+        .sentiment-badge.negatif {
+            background: var(--negative);
+        }
+
+        .sentiment-badge.netral {
+            background: var(--neutral);
+        }
